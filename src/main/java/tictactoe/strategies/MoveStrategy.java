@@ -1,4 +1,4 @@
 package tictactoe.strategies;
 
-public class MoveStrategy {
+public interface MoveStrategy {
 }
