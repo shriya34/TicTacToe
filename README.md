@@ -12,6 +12,6 @@ A Tic-Tac-Toe game supporting two players or a player against a computer opponen
 
 **Design Patterns**
 1. Factory
-2. Strategy
-2. Observer
-3. Facade
+2. Strategy 
+3. Observer 
+4. Facade
