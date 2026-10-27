@@ -1,7 +1,7 @@
 # Tic-Tac-Toe (Object-Oriented Design Project)
 
 **Team Members:** Santana Reyes and Shriya Malu  
-**Language & Platform:** Java / Java Swing (IntelliJ IDEA & JUnit 5)
+**Language & Platform:** Java / Java Swing (IntelliJ IDEA & JUnit 6)
 
 ## Project Overview
 This project is an object-oriented Tic-Tac-Toe game with an interactive 3x3 Java Swing graphical user interface. Players can compete in **Player vs. Player** or **Player vs. Computer** modes. Our project tracks player turns, validates moves, detects wins and ties, and updates the GUI reactively.
