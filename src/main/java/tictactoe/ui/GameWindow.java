@@ -39,12 +39,14 @@ public class GameWindow extends JFrame implements GameObserver {
         statusLabel.setFont(new Font("Arial", Font.BOLD, 18));
         topPanel.add(statusLabel);
 
-        JPanel modePanel = new JPanel(new FlowLayout());
         ButtonGroup modeGroup = new ButtonGroup();
         modeGroup.add(pvpRadioButton);
         modeGroup.add(pvcRadioButton);
+
+        JPanel modePanel = new JPanel(new FlowLayout());
         modePanel.add(pvpRadioButton);
         modePanel.add(pvcRadioButton);
+
         topPanel.add(modePanel);
 
         // switching mode starts a new game in that mode
