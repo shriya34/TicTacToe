@@ -9,6 +9,9 @@ public class Game {
         currentPlayer = 'X';
     }
 
+    public Board getBoard() {
+        return board;
+    }
     public char getCurrentPlayer() {
         return currentPlayer;
     }
