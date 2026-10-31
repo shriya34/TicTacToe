@@ -11,16 +11,16 @@ This project is an object-oriented Tic-Tac-Toe game with an interactive 3x3 Java
 ## Design Patterns Used
 
 ### 1. Observer Pattern (GameObserver, GameWindow, GameFacade)
-* Where it is used: tictactoe.game.GameObserver (interface), implemented by tictactoe.ui.GameWindow, and managed by tictactoe.game.GameFacade (and Game).
+* Where it is used: tictactoe.game.GameObserver (interface), implemented by tictactoe.ui.GameWindow, and managed by tictactoe.game.GameFacade.
 * How it works: GameWindow registers itself as an observer via gameFacade.addObserver(this). Whenever a valid move is made, the turn changes, or the game ends/resets, the subject invokes onGameStateChanged(char[][] boardGrid, String statusText, boolean isGameOver) on all registered observers, prompting GameWindow to update its 9 buttons and status label.
 
 ### 2. Facade Pattern (GameFacade)
 * Where it is used: tictactoe.game.GameFacade
 * How it works: Provides an interface to game subsystem (Board, Game, Player, PlayerFactory, and MoveStrategy). GameWindow interacts strictly with GameFacade (calling handleCellClick(row, col) and startNewGame(vsComputer)) without needing to manipulate Board coordinates, instantiate Player objects, or invoke strategies.
 
-### 3. Strategy Pattern (MoveStrategy, RandomStrategy)
-* Where it is used: tictactoe.strategies.MoveStrategy (interface) and tictactoe.strategies.RandomStrategy (concrete implementation), used by tictactoe.players.Player.
-* How it works: Encapsulates the algorithm for selecting a move on the board. Computer players delegate move selection to a MoveStrategy instance, allowing different AI behaviors (such as random move selection in RandomStrategy or future smart/blocking strategies) to be swapped seamlessly without altering the Player or Game classes.
+### 3. Strategy Pattern (MoveStrategy, FirstAvailableStrategy, RandomStrategy)
+* Where it is used: tictactoe.strategies.MoveStrategy (interface), tictactoe.strategies.FirstAvailableStrategy (concrete implementation), and tictactoe.strategies.RandomStrategy (planned implementation), used by tictactoe.players.Player.
+* How it works: Computer players will delegate move selection to a MoveStrategy instance, allowing different behaviors (such as selecting the first available square through FirstAvailableStrategy, choosing a random square through RandomStrategy, or future smart/blocking strategies) to be swapped without changing the Player or Game classes.
 
 ### 4. Factory Pattern (PlayerFactory)
 * Where it is used: tictactoe.players.PlayerFactory
