@@ -19,7 +19,7 @@ This project is an object-oriented Tic-Tac-Toe game with an interactive 3x3 Java
 * How it works: Provides an interface to game subsystem (Board, Game, Player, PlayerFactory, and MoveStrategy). GameWindow interacts strictly with GameFacade (calling handleCellClick(row, col) and startNewGame(vsComputer)) without needing to manipulate Board coordinates, instantiate Player objects, or invoke strategies.
 
 ### 3. Strategy Pattern (MoveStrategy, FirstAvailableStrategy, RandomStrategy)
-* Where it is used: tictactoe.strategies.MoveStrategy (interface), tictactoe.strategies.FirstAvailableStrategy (concrete implementation), and tictactoe.strategies.RandomStrategy (planned implementation), used by tictactoe.players.Player.
+* Where it is used: tictactoe.strategies.MoveStrategy (interface), tictactoe.strategies.FirstAvailableStrategy (concrete implementation), and tictactoe.strategies.RandomStrategy (concrete implementation), used by tictactoe.players.Player.
 * How it works: Computer players will delegate move selection to a MoveStrategy instance, allowing different behaviors (such as selecting the first available square through FirstAvailableStrategy, choosing a random square through RandomStrategy, or future smart/blocking strategies) to be swapped without changing the Player or Game classes.
 
 ### 4. Factory Pattern (PlayerFactory)
